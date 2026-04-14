@@ -19,13 +19,14 @@
 
 .scroll-cue {
   margin-top: 28px;
-  width: 44px;
-  height: 44px;
+  width: 45px;
+  height: 45px;
   border: 2px solid rgba(255, 255, 255, 0.55);
   border-radius: 999px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding-right: 3px;
   text-decoration: none;
   animation: cueFloat 1.6s ease-in-out infinite;
 }

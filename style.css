@@ -27,7 +27,7 @@ body {
   background: rgba(9, 109, 122, 0.621);
   z-index: 2000;
   backdrop-filter: blur(10px);
-    align-items: center;
+  align-items: center;
 }
 
 
@@ -40,9 +40,8 @@ body {
 .menu-btn {
   height: 30pt;
   width: 30pt;
-  margin-right: 2%;
-  margin-top: 2%;
-  cursor:pointer;
+  cursor: pointer;
+  align-items: center;
 }
 
 /* SIDEBAR */
@@ -352,12 +351,14 @@ body {
 
 .nav-right {
   display: flex;
+  margin-right: 7%;
   align-items: center;
   gap: 12px;
 }
 
 /* LANG SWITCH */
 .lang-switch {
+  justify-content: center;
   display: flex;
   gap: 4px;
   padding: 4px;
