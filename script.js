@@ -246,16 +246,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // scroll animation (simple)
-  const elements = document.querySelectorAll('.fade-in');
+  const elements = [...document.querySelectorAll('.fade-in')];
+  const aboutCards = [...document.querySelectorAll('.about-container .about-card.fade-in')];
+  let aboutCardsAnimated = false;
 
-  window.addEventListener('scroll', () => {
+  const revealOnScroll = () => {
     elements.forEach(el => {
+      if (el.classList.contains('about-card')) return;
+
       const pos = el.getBoundingClientRect().top;
       if (pos < window.innerHeight - 100) {
-        el.classList.add("show");
+        el.classList.add('show');
       }
     });
-  });
+
+    if (!aboutCardsAnimated && aboutCards.length) {
+      const triggerPos = aboutCards[0].getBoundingClientRect().top;
+      if (triggerPos < window.innerHeight - 90) {
+        aboutCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('show');
+          }, index * 110);
+        });
+        aboutCardsAnimated = true;
+      }
+    }
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 
   // close sidebar on click
   document.querySelectorAll('.sidebar a').forEach(link => {

@@ -13,6 +13,7 @@ body {
   background: #619ebd;
   color: rgb(7, 5, 53);
   font-family: "outfit", sans-serif;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -431,4 +432,111 @@ body {
 
 .contact-link.whatsapp::after {
   background-color: #25D366;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  .logo {
+    width: 88px;
+    height: 58px;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .sidebar {
+    width: min(78vw, 280px);
+    right: calc(-1 * min(78vw, 280px));
+  }
+
+  .hero-content {
+    padding: 0 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.45;
+    max-width: 680px;
+    margin: 8px auto 0;
+  }
+
+  .section {
+    padding: 72px 14px;
+  }
+
+  .cards {
+    gap: 14px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .clients {
+    font-size: 15px;
+  }
+
+  .clients-logos {
+    gap: 6px;
+    margin-top: 20px;
+  }
+
+  .clients-logos img {
+    width: 102px;
+    height: 64px;
+    padding: 6px;
+  }
+
+  .clients-logos img.imgg {
+    width: 126px;
+    height: 78px;
+  }
+
+  .footer {
+    padding: 30px 14px;
+  }
+
+  .contact {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 88vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .lang-switch button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .footer-links a {
+    margin: 0 6px;
+  }
 }
