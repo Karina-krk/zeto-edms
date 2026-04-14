@@ -1,11 +1,41 @@
 .about-hero {
-  padding: 150px 20px 40px;
+  min-height: 100vh;
+  padding: 130px 20px 40px;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-hero h1 {
   font-size: 48px;
+}
+
+.about-hero p {
+  max-width: 860px;
+}
+
+.scroll-cue {
+  margin-top: 28px;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  animation: cueFloat 1.6s ease-in-out infinite;
+}
+
+.scroll-cue span {
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg) translateY(-2px);
 }
 
 .about-container {
@@ -59,4 +89,67 @@
 
 .logo img{
     text-align: center;
+}
+
+@keyframes cueFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 92vh;
+    padding: 116px 14px 24px;
+  }
+
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .about-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 18px 14px 28px;
+  }
+
+  .team {
+    padding: 42px 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero h1 {
+    font-size: 30px;
+  }
+
+  .about-hero p {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .scroll-cue {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 18px;
+  }
+
+  .team {
+    padding: 34px 14px;
+  }
 }

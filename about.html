@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Site</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
@@ -33,12 +34,15 @@
   <div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
   <!-- HERO -->
-  <section class="about-hero fade-in">
+  <section class="about-hero">
   <h1>Zeto EDMS</h1>
   <p data-i18n="heroText"></p>
+  <a class="scroll-cue" href="#about-cards" aria-label="Scroll down">
+    <span></span>
+  </a>
 </section>
 
-<section class="about-container">
+<section class="about-container" id="about-cards">
 
   <div class="about-card fade-in">
     <h2 data-i18n="aboutTitle"></h2>
