@@ -272,4 +272,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // load saved language
   const savedLang = localStorage.getItem("lang") || "en";
   setLang(savedLang);
+
 });
+
+  function goToSite() {
+    window.location.href = "https://armado.cheshirehomekyrenia.org/index.php?c=auth&m=login";
+  }
