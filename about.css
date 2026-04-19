@@ -88,8 +88,21 @@
     margin-bottom: 15pt;
 }
 
+.about-logo-section {
+  padding: 24px 24px 10px;
+}
+
+.about-logo-section .logo {
+  width: 240pt;
+  height: 160pt;
+  margin-left: 24px;
+}
+
 .logo img{
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 @keyframes cueFloat {
@@ -152,5 +165,11 @@
 
   .team {
     padding: 34px 14px;
+  }
+
+  .about-logo-section .logo {
+    width: 190pt;
+    height: 126pt;
+    margin-left: 12px;
   }
 }

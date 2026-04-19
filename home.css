@@ -20,6 +20,18 @@
   z-index: 2;
 }
 
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img.logo {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .section {
   padding: 100px 20px;
   display: flex;
